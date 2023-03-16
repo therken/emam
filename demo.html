@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru" >
 <head>
-	<title>Личный кабинет</title>
+	<meta charset="UTF-8">
+	<title>Редактирование профиля</title>
 	<!-- Подключаем Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<script src="script.js"></script>
 </head>
 <body>
-	<form action="settings.php" method="POST" enctype="multipart/form-data"  >
+	<form action="profile.php" method="POST" enctype="multipart/form-data"  >
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 offset-md-4 mt-5">
 				<form>
 					<div class="form-group text-center">
-						<label type="file" for="profile-photo"><img src="https://via.placeholder.com/150" class="rounded-circle" alt="Фото профиля"></label>
+						<label type="file" for="profile-photo"><img src="def.jpg" class="rounded-circle" alt="Фото профиля"></label>
 						<input name="image" type="file" class="form-control-file" id="profile-photo" style="display: none">
 					</div>
 					<div class="form-group">
@@ -26,25 +28,25 @@
 					</div>
 					<div class="form-group">
 						<label for="lastname">Фамилия:</label>
-						<input type="text" class="form-control" id="secondname" name="secondname">
+						<input type="text" class="form-control" id="secondname" name="secondname" required>
 					</div>
 					<div class="form-group">
 						<label for="middlename">Отчество:</label>
-						<input type="text" class="form-control" id="lastname" name="lastname">
+						<input type="text" class="form-control" id="lastname" name="lastname" required>
 					</div>
 					<div class="form-group">
 						<label for="date">Дата рождения:</label>
-						<input type="date" class="form-control" id="date" name="date">
+						<input type="date" class="form-control" id="date" name="date" required>
 					</div>
 					<div class="form-group">
 						<label for="mail">Email:</label>
-						<input name="mail" type="email" class="form-control" id="mail">
+						<input type="text" name="mail" type="email" class="form-control" id="mail" required>
 					</div>
 					<div class="form-group">
 						<label for="about-me">О себе:</label>
-						<textarea maxlength="1000" class="form-control" id="about" rows="3" name="about"></textarea>
+						<textarea required type="text" maxlength="1000" class="form-control" id="about" rows="3" name="about"></textarea>
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Сохранить изменения</button>
+					<input type="submit" placeholder="Отправить" value="Сохранить">
 				</form>
 			</div>
 		</div>
