@@ -13,44 +13,43 @@
 	<script src="script.js"></script>
 </head>
 <body>
-	<form action="profile.php" method="POST" enctype="multipart/form-data"  >
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 offset-md-4 mt-5">
-				<form>
-					<div class="form-group text-center">
-						<label type="file" for="profile-photo"><img src="def.jpg" class="rounded-circle" alt="Фото профиля"></label>
-						<input name="image" type="file" class="form-control-file" id="profile-photo" style="display: none">
-					</div>
-					<div class="form-group">
-						<label for="firstname">Имя:</label>
-						<input type="text" class="form-control" id="firstname" name="firstname" required>
-					</div>
-					<div class="form-group">
-						<label for="lastname">Фамилия:</label>
-						<input type="text" class="form-control" id="secondname" name="secondname" required>
-					</div>
-					<div class="form-group">
-						<label for="middlename">Отчество:</label>
-						<input type="text" class="form-control" id="lastname" name="lastname" required>
-					</div>
-					<div class="form-group">
-						<label for="date">Дата рождения:</label>
-						<input type="date" class="form-control" id="date" name="date" required>
-					</div>
-					<div class="form-group">
-						<label for="mail">Email:</label>
-						<input type="text" name="mail" type="email" class="form-control" id="mail" required>
-					</div>
-					<div class="form-group">
-						<label for="about-me">О себе:</label>
-						<textarea required type="text" maxlength="1000" class="form-control" id="about" rows="3" name="about"></textarea>
-					</div>
-					<input type="submit" placeholder="Отправить" value="Сохранить">
-				</form>
-			</div>
-		</div>
-	</div>
-	</form>
+<form action="profile.php" method="POST" enctype="multipart/form-data"  >
+<div class="container">
+<div class="row">
+<div class="col-md-4 offset-md-4 mt-5">
+<form>
+<div class="form-group text-center">
+<label type="file" for="profile-photo"><img src="def.jpg" class="rounded-circle" alt="Фото профиля"></label>
+<input name="image" type="file" class="form-control-file" id="profile-photo" style="display: none">
+</div>
+<div class="form-group">
+<label for="firstname">Имя:</label>
+<input type="text" class="form-control" id="firstname" name="firstname" required>
+</div>
+<div class="form-group">
+<label for="lastname">Фамилия:</label>
+<input type="text" class="form-control" id="secondname" name="secondname" required>
+</div>
+<div class="form-group">
+<label for="middlename">Отчество:</label>
+<input type="text" class="form-control" id="lastname" name="lastname" required>
+</div>
+<div class="form-group">
+<label for="date">Дата рождения:</label>
+<input type="date" class="form-control" id="date" name="date" required>
+</div>
+<div class="form-group">
+<label for="mail">Email:</label>
+<input type="text" name="mail" type="email" class="form-control" id="mail" required>
+</div>
+<div class="form-group">
+<label for="about-me">О себе:</label>
+<textarea required type="text" maxlength="1000" class="form-control" id="about" rows="3" name="about"></textarea>
+</div>
+<input type="submit" placeholder="Отправить" value="Сохранить">
+</div>
+</div>
+</div>
+</form>
 </body>
 </html>
