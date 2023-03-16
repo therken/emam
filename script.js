@@ -13,3 +13,22 @@ $(document).ready(function() {
       reader.readAsDataURL(this.files[0]);
     });
   });
+  $(document).ready(function(){
+    $('form').submit(function(event){
+        event.preventDefault();
+        var formData = new FormData($('form')[0]);
+        $.ajax({
+            url: 'profile.php',
+            type: 'POST',
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(response){
+                alert(response);
+            },
+            complete: function() {
+            }
+        });
+    });
+});
