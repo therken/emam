@@ -7,6 +7,6 @@ textarea {
     min-height: 50px; /* задаем минимальную высоту textarea */
   }
 .rounded-circle {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
