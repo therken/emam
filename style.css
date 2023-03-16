@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 textarea {
     resize: none;
@@ -9,4 +9,50 @@ textarea {
 .rounded-circle {
     width: 250px;
     height: 250px;
+  }
+  input[type="submit"] {
+    background: transparent;
+    background-color: #e6cb3300;
+    border: 2px solid #22272d;
+    color: #ffffff;
+    width: 105%;
+    padding: 5px;
+    height: 40px;
+    margin-top: 2%;
+    outline: none;
+  }
+  input[type="text"] {
+    background: transparent;
+    background-color: #e6cb3300;
+    border: 2px solid #22272d;
+    color: #ffffff;
+    width: 105%;
+    padding: 5px;
+    height: 40px;
+    margin-top: 2%;
+    outline: none;
+  }
+  input[type="date"] {
+    background: transparent;
+    background-color: #e6cb3300;
+    border: 2px solid #22272d;
+    color: #ffffff;
+    width: 105%;
+    padding: 5px;
+    height: 40px;
+    margin-top: 2%;
+    outline: none;
+  }
+  textarea[type="text"]{
+    background: transparent;
+    background-color: #e6cb3300;
+    border: 2px solid #22272d;
+    color: #ffffff;
+    width: 105%;
+    padding: 5px;
+    height: 40px;
+    margin-top: 2%;
+  }
+  label{
+    color: #ffffff;
   }
