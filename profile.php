@@ -33,7 +33,7 @@ if (($edate >= $startDate) && ($edate <= $endDate)) {
 } else {
   $errorMessage = "некорректная дата";
   echo "$errorMessage"; 
-
+die();
 }
 ///загрузка файла 
 $uploaddir = 'uploads/';
@@ -44,12 +44,14 @@ $uploadFile = $uploaddir . uniqid() . '-' . basename($fileName);
 if(!is_uploaded_file($_FILES['image']['tmp_name'])) {
      $errorMessage = "Выберите изображение";
      echo "$errorMessage";
+     die();
 } 
 
 //Проверка что это картинка
 if (!getimagesize($_FILES["image"]["tmp_name"])) {
      $errorMessage = "Это не картинка...";
      echo "$errorMessage";
+     die();
 }
 
 if (move_uploaded_file($tempFilePath, $uploadFile)) {
@@ -61,7 +63,7 @@ if (move_uploaded_file($tempFilePath, $uploadFile)) {
 }
 $photo_link = $uploadFile; 
 ///добавление значений в бд
-  $sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, dendata,img)
+  $sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, date,img)
   VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$photo_link')";
   ///вывод сообщения о том что данные добавлены
   if(mysqli_query($conn, $sql)){
