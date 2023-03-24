@@ -1,5 +1,8 @@
 body{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+.wrapper{
+  margin-top: 10%;
 }
 textarea {
     resize: none;
@@ -14,18 +17,21 @@ textarea {
     background: transparent;
     background-color: #e6cb3300;
     border: 2px solid #22272d;
-    color: #ffffff;
+    color: #000000;
     width: 105%;
     padding: 5px;
     height: 40px;
     margin-top: 2%;
     outline: none;
   }
+  .wrapper{
+    margin-left: 50%;
+  }
   input[type="text"] {
     background: transparent;
     background-color: #e6cb3300;
     border: 2px solid #22272d;
-    color: #ffffff;
+    color: #000000;
     width: 105%;
     padding: 5px;
     height: 40px;
@@ -36,7 +42,7 @@ textarea {
     background: transparent;
     background-color: #e6cb3300;
     border: 2px solid #22272d;
-    color: #ffffff;
+    color: #000000;
     width: 105%;
     padding: 5px;
     height: 40px;
@@ -47,12 +53,19 @@ textarea {
     background: transparent;
     background-color: #e6cb3300;
     border: 2px solid #22272d;
-    color: #ffffff;
+    color: #000000;
     width: 105%;
     padding: 5px;
     height: 40px;
     margin-top: 2%;
   }
   label{
-    color: #ffffff;
+    color: #000000;
   }
+  .right-part{
+    margin-top: 10%;
+  }
+  .left-part{
+    margin-top: 13%;
+  }
+
