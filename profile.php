@@ -10,7 +10,7 @@ if($conn === false){
       . mysqli_connect_error());
 }
 ///переменные
-$name = mysqli_real_escape_string($conn ,$_POST['name']);
+$name = mysqli_real_escape_string($conn ,$_POST['firstname']);
 $sec = mysqli_real_escape_string($conn,$_POST['secondname']);
 $last = mysqli_real_escape_string($conn,$_POST['lastname']);
 $mail = mysqli_real_escape_string($conn,$_POST['mail']);
