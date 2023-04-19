@@ -6,11 +6,11 @@ $db = 'form';
 $conn = mysqli_connect($host , $user , $pass , $db);
 // Check connection
 if($conn === false){
-  die("ERROR: Невозможно подключиться. "
-      . mysqli_connect_error());
+die("ERROR: Невозможно подключиться. "
+. mysqli_connect_error());
 }
 ///переменные
-$name = mysqli_real_escape_string($conn ,$_POST['name']);
+$name = mysqli_real_escape_string($conn ,$_POST['firstname']);
 $sec = mysqli_real_escape_string($conn,$_POST['secondname']);
 $last = mysqli_real_escape_string($conn,$_POST['lastname']);
 $mail = mysqli_real_escape_string($conn,$_POST['mail']);
@@ -27,12 +27,12 @@ if ($result->num_rows > 0) {
 $errorMessage = "Этот email уже используется";
 echo "$errorMessage";
 } else {
-  ///проверка даты
+///проверка даты
 if (($edate >= $startDate) && ($edate <= $endDate)) {
-  echo "";
+echo "";
 } else {
-  $errorMessage = "некорректная дата";
-  echo "$errorMessage"; 
+$errorMessage = "некорректная дата";
+echo "$errorMessage"; 
 die();
 }
 ///загрузка файла 
@@ -42,38 +42,38 @@ $fileName = $_FILES['image']['name'];
 $uploadFile = $uploaddir . uniqid() . '-' . basename($fileName); 
 
 if(!is_uploaded_file($_FILES['image']['tmp_name'])) {
-     $errorMessage = "Выберите изображение";
-     echo "$errorMessage";
-     die();
+$errorMessage = "Выберите изображение";
+echo "$errorMessage";
+die();
 } 
 
 //Проверка что это картинка
 if (!getimagesize($_FILES["image"]["tmp_name"])) {
-     $errorMessage = "Это не картинка...";
-     echo "$errorMessage";
-     die();
+$errorMessage = "Это не картинка...";
+echo "$errorMessage";
+die();
 }
 
 if (move_uploaded_file($tempFilePath, $uploadFile)) {
-    $successMessage = "Файл корректен и был успешно загружен.";
-    echo "$successMessage";
+$successMessage = "Файл корректен и был успешно загружен.";
+echo "$successMessage";
 } else {
-    $errorMessage = "Возможная атака с помощью файловой загрузки!";
-    echo "'$errorMessage";
+$errorMessage = "Возможная атака с помощью файловой загрузки!";
+echo "'$errorMessage";
 }
 $photo_link = $uploadFile; 
 ///добавление значений в бд
-  $sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, date,img)
-  VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$photo_link')";
-  ///вывод сообщения о том что данные добавлены
-  if(mysqli_query($conn, $sql)){
-    $successMessage= "Информация добавлена.";  
-    echo "$successMessage";
-  } else{
-    $errorMessage= "Ошибка $sql. "
-        . mysqli_error($conn);
-        echo "$errormeMessage";
-  }
+$sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, date,img)
+VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$photo_link')";
+///вывод сообщения о том что данные добавлены
+if(mysqli_query($conn, $sql)){
+$successMessage= "Информация добавлена.";  
+echo "$successMessage";
+} else{
+$errorMessage= "Ошибка $sql. "
+. mysqli_error($conn);
+echo "$errormeMessage";
+}
 }
 mysqli_close($conn);
 ?>
