@@ -60,6 +60,7 @@ echo "$successMessage";
 } else {
 $errorMessage = "Возможная атака с помощью файловой загрузки!";
 echo "'$errorMessage";
+  die();
 }
 $photo_link = $uploadFile; 
 ///добавление значений в бд
